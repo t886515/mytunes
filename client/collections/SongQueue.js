@@ -4,6 +4,7 @@ var SongQueue = Backbone.Collection.extend({
   model: SongModel,
 
   initialize: function() {
+
     this.on('add', function() {
       this.length === 1 ? this.playFirst() : undefined;
     });
